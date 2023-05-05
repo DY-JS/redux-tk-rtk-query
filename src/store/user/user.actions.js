@@ -5,15 +5,17 @@ const fetchUserById = (userId) =>
     setTimeout(() => resolve({ id: 1, name: 'Max' }), 1000)
   );
 
+//эта ф-ция считается экшеном и попадает в rootActions
 export const getUserById = createAsyncThunk(
   'user/by-id',
   async (userId, thunkApi) => {
     try {
-      const response = await fetchUserById(userId);
+      //getUserById.pending
+      const response = await fetchUserById(userId); //getUserById.fulfilled
       return response;
     } catch (e) {
       //   thunkApi.rejectWithValue({});
-      thunkApi.rejectWithValue(e);
+      thunkApi.rejectWithValue(e); //getUserById.rejected
     }
   }
 );
