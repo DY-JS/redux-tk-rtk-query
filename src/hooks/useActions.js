@@ -1,15 +1,12 @@
 import { bindActionCreators } from '@reduxjs/toolkit';
+import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
-
-const rootActions = {
-  //все actions из проекта
-  ...actions,
-};
+import { rootActions } from '../store/rootActions';
 
 export const useAction = () => {
+  // console.log(rootActions);
   const dispatch = useDispatch();
-
   return useMemo(() => {
-    bindActionCreators(rootActions, dispatch), [dispatch];
-  });
+    return bindActionCreators(rootActions, dispatch);
+  }, [dispatch]);
 };
