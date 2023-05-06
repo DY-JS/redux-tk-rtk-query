@@ -10,7 +10,7 @@ import { api } from './api';
 export const recipeApi = api.injectEndpoints({
   //т.е. к api.js добавляем endpoints
   endpoints: (builder) => ({
-    // getRecipes: builder.query({   //это в api.js
+    // getRecipes: builder.query({   //это в api.js !!! - базовый запрос
     //   query: () => '/', //получить все рецепты
     // }),
     createRecipe: builder.mutation({
@@ -23,4 +23,6 @@ export const recipeApi = api.injectEndpoints({
   }),
 });
 
-//export const { } = recipeApi;
+export const { useCreateRecipeMutation } = recipeApi;
+
+//const [createRecipe, result] = useCreateRecipeMutation();  //отдаёт ф-цию и рез-т

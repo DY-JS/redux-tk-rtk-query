@@ -2,8 +2,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import styles from './RecipeItem.module.css';
 //import { actions } from './../store/favorites/favorites.slice';
 import { useAction } from '../../hooks/useActions';
-import Header from '../header/Header';
-import { BsFillBookmarkHeartFill } from 'react-icons/bs';
 import { useFavorites } from '../../hooks/useFavorites';
 
 function RecipeItem({ recipe }) {
