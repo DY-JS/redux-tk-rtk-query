@@ -5,7 +5,6 @@
       "name": "Apple Frangipan Tart",
       "image": "https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg"
     },
-
     {
       "id": 2,
       "name": "Apple & Blackberry Crumble",
@@ -20,6 +19,21 @@
       "id": 4,
       "name": "Ayam percik",
       "image": "https://www.themealdb.com/images/media/meals/020z181619788503.jpg"
+    },
+    {
+      "name": "Bakewell tart",
+      "image": "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
+      "id": 5
+    },
+    {
+      "name": "Beef Wellington",
+      "image": "https://www.themealdb.com/images/media/meals/vvpprx1487325699.jpg",
+      "id": 6
+    },
+    {
+      "name": "Bread & Butter Pouring",
+      "image": "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg",
+      "id": 7
     }
   ]
 }

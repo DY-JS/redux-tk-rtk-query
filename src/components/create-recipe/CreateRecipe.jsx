@@ -3,12 +3,14 @@ import { useCreateRecipeMutation } from '../../store/api/recipe.api';
 
 const CreateRecipe = () => {
   const defaultRecipe = {
+    //делаем без id, json-server сам добавит id
     name: '',
     image: '',
   };
   const [recipe, setRecipe] = useState(defaultRecipe);
 
-  const [createRecipe, result] = useCreateRecipeMutation(); //получили ф-цию
+  //const [createRecipe, result] = useCreateRecipeMutation();
+  const [createRecipe] = useCreateRecipeMutation(); //получили ф-цию
 
   const handleSubmit = (e) => {
     e.preventDefault();

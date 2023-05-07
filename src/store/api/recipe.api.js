@@ -19,6 +19,12 @@ export const recipeApi = api.injectEndpoints({
         url: '/',
         method: 'POST',
       }),
+      invalidatesTags: () => [
+        //применяем ревалидацию по тэгу 'Recipe' из api.js
+        {
+          type: 'Recipe',
+        },
+      ],
     }),
   }),
 });

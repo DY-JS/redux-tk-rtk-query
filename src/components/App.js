@@ -6,6 +6,14 @@ import { useGetRecipesQuery } from '../store/api/api';
 import CreateRecipe from './create-recipe/CreateRecipe';
 
 function App() {
+  // const userId = null;
+  // useGetRecipesQuery - загрузка по условию
+  //skip, selectFromResult,refetchOnFocus, refetchOnReconnect, pollingInterval
+
+  // const { isLoading, data } = useGetRecipesQuery(undefined, {
+  //   skip: !userId,
+  // });
+
   const { isLoading, data } = useGetRecipesQuery(); //cразу загрузятся данные
   console.log(data);
 
