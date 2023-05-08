@@ -1,10 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux';
-import styles from './RecipeItem.module.css';
 //import { actions } from './../store/favorites/favorites.slice';
 import { useAction } from '../../hooks/useActions';
 import { useFavorites } from '../../hooks/useFavorites';
+import { IRecipe } from '../types/recipe.types';
+import styles from './RecipeItem.module.css';
+import { JSXElementConstructor } from 'react';
 
-function RecipeItem({ recipe }) {
+interface IRecipeItem {
+  recipe: IRecipe;
+}
+
+function RecipeItem({ recipe }: IRecipeItem) {
   //const favorites = useSelector((state) => state.favorites);
   const favorites = useFavorites();
   console.log(favorites);

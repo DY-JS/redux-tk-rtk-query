@@ -19,3 +19,5 @@ export const store = configureStore({
     getDefaultMiddleware().concat(api.middleware).concat(logger),
 });
 //к дефолтному Middleware добавили api.middleware и logger
+
+export type RootState = ReturnType<typeof store.getState>; //для типизаци селекторов(useTypedSelector)

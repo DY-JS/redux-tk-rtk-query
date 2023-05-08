@@ -1,18 +1,19 @@
-import { useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { useCreateRecipeMutation } from '../../store/api/recipe.api';
+import { IRecipeData } from '../types/recipe.types';
 
 const CreateRecipe = () => {
-  const defaultRecipe = {
+  const defaultRecipe: IRecipeData = {
     //делаем без id, json-server сам добавит id
     name: '',
     image: '',
   };
-  const [recipe, setRecipe] = useState(defaultRecipe);
+  const [recipe, setRecipe] = useState<IRecipeData>(defaultRecipe);
 
   //const [createRecipe, result] = useCreateRecipeMutation();
   const [createRecipe] = useCreateRecipeMutation(); //получили ф-цию
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     createRecipe(recipe).then(() => {
       setRecipe(defaultRecipe);
