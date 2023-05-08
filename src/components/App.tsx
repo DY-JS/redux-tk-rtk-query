@@ -4,7 +4,7 @@ import Header from './header/Header';
 import User from './user/User';
 import { useGetRecipesQuery } from '../store/api/api';
 import CreateRecipe from './create-recipe/CreateRecipe';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function App() {
   // const userId = null;

@@ -4,7 +4,6 @@ import { useAction } from '../../hooks/useActions';
 import { useFavorites } from '../../hooks/useFavorites';
 import { IRecipe } from '../types/recipe.types';
 import styles from './RecipeItem.module.css';
-import { JSXElementConstructor } from 'react';
 
 interface IRecipeItem {
   recipe: IRecipe;
